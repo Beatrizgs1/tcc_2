@@ -46,7 +46,7 @@ export default function Nav() {
                 <div className={`overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-screen' : 'max-h-0'}`}>
                     <div className={`bg-purple text-white p-4 transition-transform transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
                         <ul className="flex flex-col space-y-8 mt-4">
-                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogoS'].map((path, index) => (
+                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map((path, index) => (
                                 <li key={index} className={location.pathname === path ? 'font-bold underline decoration-white text-white' : 'hover:underline'}>
                                     <Link to={path} onClick={toggleMenu}>{path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}</Link>
                                 </li>
