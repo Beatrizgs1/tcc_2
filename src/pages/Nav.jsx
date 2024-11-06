@@ -17,7 +17,7 @@ export default function Nav() {
                 <div className="max-w-8xl mx-auto flex justify-between items-center">
                     <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
                     <ul className="text-sm flex space-x-12">
-                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores' ,'/jogo'].map((path, index) => (
+                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores' ,'/jogos'].map((path, index) => (
                             <li key={index} className={location.pathname === path ? 'text-purple font-bold underline decoration-purple' : 'hover:underline'}>
                                 <Link to={path}>{path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}</Link>
                             </li>
