@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+        background-color: white;
+    }
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float-effect {
+    animation: float 3s ease-in-out infinite; 
+
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 25%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  @keyframes cursor-disappear {
+    0% { border-color: #5C6898; }
+    100% { border-color: transparent; }
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid #5C6898; 
+    animation: 
+      typing 2s steps(20, end), 
+      blink 0.75s step-end infinite,
+      cursor-disappear 2s steps(20, end) 2s forwards; 
+    font-family: 'FontTitulo', sans-serif;
+  }
+  
+  h1 {
+    color: #5C6898; 
+  }
+  
+
+  @keyframes flutter {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .animate-flutter {
+    animation: flutter 1s ease-in-out infinite;
+  }
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.float-effect {
+  animation: float 2s ease-in-out infinite; 
+}
+
+  
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #4a90e2;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.spinner {
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid #4a90e2; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.popup {
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-button {
+  color: gray;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-button:hover {
+  color: #333;
+}
+
+.border-google {
+  border-color: #ff9946;
+}
+
+.border-facebook {
+  border-color: #0d58b9;
+}
+
+.border-apple {
+  border-color: #000000;
+}
+
+.card {
+  background-color: #e0b3f3; 
+  border-radius: 8px; 
+  padding: 20px; 
+}
+
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #3b82f6; 
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mySwiper .swiper-button-next {
+  right: -30px;
+}
+
+.mySwiper .swiper-button-prev {
+  left: -30px; 
+}
+.swiper-pagination-bullet {
+  background: #5C6898; 
+}
+
+.swiper-pagination-bullet-active {
+  background: #404a6e; 
+}
+@keyframes pulsate {
+  0% { transform: scale(1); color: #5C6898; }
+  50% { transform: scale(1.1); color: #8a98ce; }
+  100% { transform: scale(1); color: #3f486d; }
+}
+
+.tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.tooltip-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.8); 
+}
+
+.relative:hover .tooltip {
+  opacity: 1;
+}
+.tooltip-arm:hover {
+  opacity: 1; 
+}

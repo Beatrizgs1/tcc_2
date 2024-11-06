@@ -1,0 +1,35 @@
+.mySwiper .swiper-pagination {
+    position: absolute;
+    bottom: -25px; /* Ajuste essa margem para posicionar conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .mySwiper .swiper-pagination-bullet {
+    background-color: #000; /* Cor das bolinhas */
+    opacity: 1;
+  }
+  
+  .mySwiper .swiper-pagination-bullet-active {
+    background-color: #fff; /* Cor das bolinhas ativas */
+  }
+
+.swiper-button-next,
+.swiper-button-prev {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px; /* Ajuste conforme necessário */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Ajuste conforme necessário */
+}
+  
