@@ -50,8 +50,8 @@ export function Nossoproduto() {
                 <div className='mr-8 mb-15 font-paragrafo'>
                   <p className='font-topico text-purple md:2xl lg:text-[30px] mb-15 mt-15'>Guia de utilização</p>
 
-                  {/* Retângulo para o vídeo do YouTube */}
-                  <div className='bg-gray-200 rounded-lg p-4 w-full max-w-[700px] h-[390px] mt-4'>
+                  
+                  <div className='bg-gray-200 rounded-lg p-4  ml-4 w-full max-w-[700px] h-[390px] mt-4'>
                     <iframe 
                       width="100%" 
                       height="100%" 
@@ -86,7 +86,7 @@ export function Nossoproduto() {
             </div>
           </section>
 
-          {/* Seção Desenvolvimento */}
+         
           <div className='flex items-center mt-10'>
             <h1 className='text-purple sm:text-3xl text-xl font-titulo my-14 font-normal mr-12'>Desenvolvimento</h1>
             <hr className='w-[1500px] border-purple' />
@@ -115,7 +115,7 @@ export function Nossoproduto() {
                 {activePhase}
               </p>
             </div>
-            <div className='w-full max-w-[600px] flex flex-col '>
+            <div className='w-full max-w-[600px] flex flex-col  ml-7 '>
               <p className="font-paragrafo text-base sm:text-lg text-justify mr-[22px] ml-[4px] mb-5">
                 {activePhase === 'Primeira Fase' && 'Na primeira fase, focamos na seleção e aquisição das peças e componentes essenciais para a construção do robô...'}
                 {activePhase === 'Segunda Fase' && 'Durante a segunda fase, trabalhamos na programação inicial do robô...'}
