@@ -212,3 +212,33 @@
 .tooltip-arm:hover {
   opacity: 1; 
 }
+@keyframes scaleButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-animation {
+  animation: scaleButton 2s infinite ease-in-out;
+}
+/* Tailwind CSS dark mode support */
+body.dark {
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto claro */
+}
+
+body.dark .bg-purple {
+  background-color: #5C6898; /* Cor roxa no modo escuro */
+}
+
+body.dark .text-purple {
+  color: #5C6898; /* Texto roxo no modo escuro */
+}
+
+/* Adicione outras classes dark: conforme necessário para outros componentes */

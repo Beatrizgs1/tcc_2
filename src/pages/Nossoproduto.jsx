@@ -50,19 +50,18 @@ export function Nossoproduto() {
                 <div className='mr-8 mb-15 font-paragrafo'>
                   <p className='font-topico text-purple md:2xl lg:text-[30px] mb-15 mt-15'>Guia de utilização</p>
 
-                  
-                  <div className='bg-gray-200 rounded-lg p-4  ml-4 w-full max-w-[700px] h-[390px] mt-4'>
-                    <iframe 
-                      width="100%" 
-                      height="100%" 
-                      src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowFullScreen
-                      className='rounded-lg'
-                    ></iframe>
-                  </div>
+                  <div className='bg-gray-200 rounded-lg p-4 ml-4 w-full max-w-[700px] h-[390px] mt-4'>
+                  <iframe 
+                   width="100%" 
+                   height="100%" 
+                   src="https://www.youtube.com/embed/i76IcCoIKUo" 
+                   title="Robô Kids" 
+                   frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                  className='rounded-lg'
+                  ></iframe>
+                 </div>
                 </div>
               </div>
 
