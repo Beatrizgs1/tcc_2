@@ -114,7 +114,7 @@ export function Nossoproduto() {
                 {activePhase}
               </p>
             </div>
-            <div className='w-full max-w-[600px] flex flex-col  ml-7 '>
+            <div className='w-full max-w-[600px] flex flex-col mr-[50px] '>
               <p className="font-paragrafo text-base sm:text-lg text-justify mr-[22px] ml-[4px] mb-5">
                 {activePhase === 'Primeira Fase' && 'Na primeira fase, focamos na seleção e aquisição das peças e componentes essenciais para a construção do robô...'}
                 {activePhase === 'Segunda Fase' && 'Durante a segunda fase, trabalhamos na programação inicial do robô...'}
