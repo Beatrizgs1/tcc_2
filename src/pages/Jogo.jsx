@@ -7,7 +7,7 @@ export function Jogo() {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Nav />
-      <div className="flex-grow flex flex-col justify-center items-center mx-4 mt-5 mb-4">
+      <div className="flex-grow flex flex-col justify-center items-center mx-4 mt-5 mb-4 px-8">
         <h1 className="animated-title text-2xl sm:text-3xl md:text-4xl font-semibold text-purple mb-[70px] mt-12 font-titulo text-center">
           Funcionamento dos Jogos
         </h1>
