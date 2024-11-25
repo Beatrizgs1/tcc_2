@@ -3,7 +3,8 @@ import Nav from './Nav';
 import Footer from "./Footer";
 import Carossel from './carrosel/CMateriais';
 
-import imgRoboMateriais from '../assets/iconsRedes/robo_materiais.svg';
+// Modificado para importar o novo arquivo de imagem
+import imgRoboMateriais from '../assets/iconsRedes/robo.svg';
 
 export function Materiais() {
   return (
@@ -27,12 +28,12 @@ export function Materiais() {
             </div>
 
             <div className='relative mt-12 sm:mt-24 hover:cursor-pointer transform transition ease-in-out duration-2000 float-effect'>
+              {/* Imagem alterada para o novo arquivo */}
               <img
                 src={imgRoboMateriais}
                 alt="Robô da página de materiais"
-                className="sm:w-[428px] sm:h-[512px] w-[153px] h-[215px] mx-auto"
+                className="sm:w-[428px] sm:h-[512px] w-[153px] h-[215px] mx-auto bg-transparent"
               />
-
        
               <div className="tooltip tooltip-head absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 transition-opacity">
                 Display IPS
