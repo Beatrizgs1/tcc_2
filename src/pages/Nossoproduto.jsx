@@ -50,7 +50,7 @@ export function Nossoproduto() {
                 <div className='mr-8 mb-15 font-paragrafo'>
                   <p className='font-topico text-purple dark:text-white md:2xl lg:text-[30px] mb-15 mt-15'>Guia de utilização</p>
 
-                  <div className='bg-gray-200 dark:bg-gray-700 rounded-lg p-4 ml-2  w-full max-w-[700px] h-[390px] mt-4'>
+                  <div className='bg-gray-200 dark:bg-gray-700 rounded-lg p-4 ml-2  w-full max-w-[700px] h-[390px] mt-4 mb-10'>
                     <iframe 
                       width="320" 
                       height="400" 
