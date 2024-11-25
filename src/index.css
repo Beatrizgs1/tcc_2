@@ -227,18 +227,18 @@
 .button-animation {
   animation: scaleButton 2s infinite ease-in-out;
 }
-/* Tailwind CSS dark mode support */
+
 body.dark {
-  background-color: #121212; /* Fundo escuro */
-  color: #ffffff; /* Texto claro */
+  background-color: #121212; 
+  color: #ffffff; 
 }
 
 body.dark .bg-purple {
-  background-color: #5C6898; /* Cor roxa no modo escuro */
+  background-color: #5C6898; 
 }
 
 body.dark .text-purple {
-  color: #5C6898; /* Texto roxo no modo escuro */
+  color: #5C6898; 
 }
 
-/* Adicione outras classes dark: conforme necessário para outros componentes */
+

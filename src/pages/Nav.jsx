@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoSite from '../assets/logoSite.svg';
 import logoSite2 from '../assets/logoSite2.svg';
-import { FaBars } from 'react-icons/fa'; // Importando o ícone de três linhas
+import { FaBars, FaTimes } from 'react-icons/fa'; // Importando o ícone de três linhas e o ícone de fechar (X)
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,6 @@ export default function Nav() {
         localStorage.setItem('theme', newTheme);
     };
 
-    // Alterar tema no corpo do documento
     useEffect(() => {
         document.body.classList.toggle('dark', theme === 'dark');
     }, [theme]);
@@ -27,17 +26,14 @@ export default function Nav() {
 
     return (
         <div>
-            {/* Navbar - Tema Claro e Escuro para o header e site inteiro */}
             <div
-                className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${
-                    theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'
-                }`}
+                className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'}`}
             >
                 <div className="max-w-8xl mx-auto flex justify-between items-center px-4">
                     <img
-                        src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
+                        src={theme === 'dark' ? logoSite2 : logoSite}
                         alt="Logo do site Robô Kids"
-                        className="w-auto h-10" // Define as duas logos com o mesmo tamanho
+                        className="w-auto h-10"
                     />
                     <ul className="text-sm flex space-x-12">
                         {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
@@ -90,34 +86,41 @@ export default function Nav() {
                 </div>
             </div>
 
-            {/* Menu para dispositivos móveis */}
             <div className="md:hidden">
                 <div className="flex justify-between items-center p-4">
                     <img
-                        src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
+                        src={theme === 'dark' ? logoSite2 : logoSite}
                         alt="Logo do site Robô Kids"
-                        className="w-auto h-8 md:h-7" // Define as duas logos com o mesmo tamanho
+                        className="w-auto h-8 md:h-7"
                     />
                     <div className="flex items-center space-x-4">
-                        {/* Botão de alternar tema no menu mobile */}
                         <button
                             onClick={toggleTheme}
                             className="text-2xl focus:outline-none dark:text-white"
                         >
                             {theme === 'light' ? '🌙' : '☀️'}
                         </button>
-                        {/* Ícone de três linhas, branco para o tema escuro e preto para o claro */}
+
+                        {/* Botão de menu (três linhas) */}
                         <button onClick={toggleMenu} className="focus:outline-none">
                             <FaBars className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`} />
                         </button>
                     </div>
                 </div>
+
+                {/* Menu Dropdown */}
                 <div
                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
                         isMenuOpen ? 'max-h-screen' : 'max-h-0'
                     }`}
                 >
                     <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
+                        <div className="flex justify-between items-center mb-4 pl-[333px]">
+                            {/* Ícone de fechar (X) posicionado à direita */}
+                            <button onClick={toggleMenu} className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+                                <FaTimes />
+                            </button>
+                        </div>
                         <ul className="flex flex-col space-y-8 mt-4">
                             {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
                                 (path, index) => (

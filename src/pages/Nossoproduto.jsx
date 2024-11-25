@@ -65,7 +65,7 @@ export function Nossoproduto() {
                 </div>
               </div>
 
-              <div className='ml-auto space-y-6 w-full max-w-[600px] text-justify font-paragrafo text-base mt-10 dark:text-white'>
+              <div className='ml-auto space-y-6 w-full max-w-[600px] text-justify font-paragrafo text-base mt-10 px-5 dark:text-white'>
                 {[  
                   { number: numeroUm, title: "Passo 1", description: "Na tela inicial, escolha entre diferentes modos de aprendizado..." },
                   { number: numeroDois, title: "Passo 2", description: "A criança pode tocar nos botões na tela para responder às perguntas..." },

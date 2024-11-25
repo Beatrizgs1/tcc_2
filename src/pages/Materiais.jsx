@@ -3,7 +3,6 @@ import Nav from './Nav';
 import Footer from "./Footer";
 import Carossel from './carrosel/CMateriais';
 
-// Modificado para importar o novo arquivo de imagem
 import imgRoboMateriais from '../assets/iconsRedes/robo.svg';
 
 export function Materiais() {
@@ -28,7 +27,6 @@ export function Materiais() {
             </div>
 
             <div className='relative mt-12 sm:mt-24 hover:cursor-pointer transform transition ease-in-out duration-2000 float-effect'>
-              {/* Imagem alterada para o novo arquivo */}
               <img
                 src={imgRoboMateriais}
                 alt="Robô da página de materiais"

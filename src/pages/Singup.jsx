@@ -53,7 +53,8 @@ export function Singup() {
           />
         </div>
 
-        <div className='md:ml-8 w-full md:w-auto px-4 md:px-0 mb-[20px]'>
+        {/* Contêiner do formulário com fundo preto no modo escuro */}
+        <div className='md:ml-8 w-full md:w-auto px-4 md:px-0 mb-[20px] dark:bg-black'>
           <h1 className='text-3xl text-black md:text-4xl text-center md:text-left font-singUp dark:text-white'>
             Bem-vindo ao Robô <span className='text-purple font-titulo'>Kids</span>
           </h1>
@@ -67,7 +68,7 @@ export function Singup() {
                   type="name"
                   id="name"
                   placeholder='ex: Nome de usuário'
-                  className='block w-full p-3 border-2 border-purple rounded dark:bg-white dark:text-black'
+                  className='block w-full p-3 border-2 border-purple rounded dark:bg-black dark:text-black'
                 />
               </div>
 
@@ -77,7 +78,7 @@ export function Singup() {
                   type="email"
                   id="email"
                   placeholder='ex: robokids@gmail.com'
-                  className='block w-full p-3 border-2 border-purple rounded dark:bg-white dark:text-black'
+                  className='block w-full p-3 border-2 border-purple rounded dark:bg-black dark:text-black'
                 />
               </div>
 
@@ -87,7 +88,7 @@ export function Singup() {
                   type={mostrarSenha ? "text" : "password"}
                   id="password"
                   placeholder='********'
-                  className='block w-full p-3 border-2 border-purple rounded dark:bg-white dark:text-black'
+                  className='block w-full p-3 border-2 border-purple rounded dark:bg-black dark:text-black'
                 />
                 <div className='mt-2 flex items-center'>
                   <input
