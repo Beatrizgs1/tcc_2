@@ -98,17 +98,19 @@ export default function Nav() {
                         alt="Logo do site Robô Kids"
                         className="w-auto h-8 md:h-7" // Define as duas logos com o mesmo tamanho
                     />
-                    <button onClick={toggleMenu} className="focus:outline-none">
+                    <div className="flex items-center space-x-4">
+                        {/* Botão de alternar tema no menu mobile */}
+                        <button
+                            onClick={toggleTheme}
+                            className="text-2xl focus:outline-none dark:text-white"
+                        >
+                            {theme === 'light' ? '🌙' : '☀️'}
+                        </button>
                         {/* Ícone de três linhas, branco para o tema escuro e preto para o claro */}
-                        <FaBars className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`} />
-                    </button>
-                    {/* Botão de alternar tema no menu mobile */}
-                    <button
-                        onClick={toggleTheme}
-                        className="text-2xl focus:outline-none dark:text-white"
-                    >
-                        {theme === 'light' ? '🌙' : '☀️'}
-                    </button>
+                        <button onClick={toggleMenu} className="focus:outline-none">
+                            <FaBars className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`} />
+                        </button>
+                    </div>
                 </div>
                 <div
                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
