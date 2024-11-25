@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoSite from '../assets/logoSite.svg';
-import tresLinhas from '../assets/tresLinhas.svg';
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,36 +29,24 @@ export default function Nav() {
         <div>
             {/* Navbar */}
             <div
-                className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${
-                    theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'
-                }`}
+                className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'}`}
             >
                 <div className="max-w-8xl mx-auto flex justify-between items-center px-4">
                     <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
                     <ul className="text-sm flex space-x-12">
-                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
-                            (path, index) => (
-                                <li key={index} className="relative group">
-                                    <Link
-                                        to={path}
-                                        className={`relative inline-block transition-transform duration-300 ease-in-out ${
-                                            location.pathname === path
-                                                ? 'text-purple font-bold'
-                                                : 'hover:text-purple dark:text-white'
-                                        }`}
-                                    >
-                                        {path === '/'
-                                            ? 'Home'
-                                            : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                                    </Link>
-                                    <span
-                                        className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
-                                            location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
-                                        }`}
-                                    />
-                                </li>
-                            )
-                        )}
+                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map((path, index) => (
+                            <li key={index} className="relative group">
+                                <Link
+                                    to={path}
+                                    className={`relative inline-block transition-transform duration-300 ease-in-out ${location.pathname === path ? 'text-purple font-bold' : 'hover:text-purple dark:text-white'}`}
+                                >
+                                    {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                                </Link>
+                                <span
+                                    className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                                />
+                            </li>
+                        ))}
                         <li>
                             <Link
                                 to="/login"
@@ -91,11 +78,12 @@ export default function Nav() {
                 <div className="flex justify-between items-center p-4">
                     <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
                     <button onClick={toggleMenu} className="focus:outline-none">
-                        {isMenuOpen ? (
-                            <span className="text-2xl dark:text-white">&times;</span>
-                        ) : (
-                            <img src={tresLinhas} alt="Menu" />
-                        )}
+                        {/* Ícone de menu com cor dinâmica */}
+                        <span
+                            className={`text-2xl ${theme === 'light' ? 'text-black' : 'text-white'}`}
+                        >
+                            {isMenuOpen ? '×' : '☰'}
+                        </span>
                     </button>
                     <button
                         onClick={toggleTheme}
@@ -105,36 +93,24 @@ export default function Nav() {
                     </button>
                 </div>
                 <div
-                    className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
-                        isMenuOpen ? 'max-h-screen' : 'max-h-0'
-                    }`}
+                    className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'}`}
                 >
                     <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
                         <ul className="flex flex-col space-y-8 mt-4">
-                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
-                                (path, index) => (
-                                    <li key={index} className="relative group">
-                                        <Link
-                                            to={path}
-                                            onClick={toggleMenu}
-                                            className={`relative inline-block transition-transform duration-300 ease-in-out ${
-                                                location.pathname === path
-                                                    ? 'font-bold underline decoration-purple text-white'
-                                                    : 'hover:underline dark:text-white'
-                                            }`}
-                                        >
-                                            {path === '/'
-                                                ? 'Home'
-                                                : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                                        </Link>
-                                        <span
-                                            className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
-                                                location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
-                                            }`}
-                                        />
-                                    </li>
-                                )
-                            )}
+                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map((path, index) => (
+                                <li key={index} className="relative group">
+                                    <Link
+                                        to={path}
+                                        onClick={toggleMenu}
+                                        className={`relative inline-block transition-transform duration-300 ease-in-out ${location.pathname === path ? 'font-bold underline decoration-purple text-white' : 'hover:underline dark:text-white'}`}
+                                    >
+                                        {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                                    </Link>
+                                    <span
+                                        className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                                    />
+                                </li>
+                            ))}
                             <li>
                                 <Link
                                     to="/login"
