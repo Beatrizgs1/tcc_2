@@ -8,21 +8,16 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import Bateria from '../../assets/carossselMateriais/CardBateria.svg';
 import AltoFalante from '../../assets/carossselMateriais/CardAltofalante.svg';
-import Amplificador from '../../assets/carossselMateriais/CardAmplificador.svg';
 import Conector from '../../assets/carossselMateriais/CardConector.svg';
 import DisplayIPS from '../../assets/carossselMateriais/CardDisplayIPS.svg';
-import DisplayLCD from '../../assets/carossselMateriais/CardDisplayLCD.svg';
 import Jumperers from '../../assets/carossselMateriais/CardJumpers.svg';
 import Leonardo from '../../assets/carossselMateriais/CardLeonardo.svg';
 import Mineprotoboard from '../../assets/carossselMateriais/CardMineprotoboard.svg';
-import Modulo from '../../assets/carossselMateriais/CardModulo.svg';
 import Protoboard from '../../assets/carossselMateriais/CardProtoboard.svg';
 import Servo from '../../assets/carossselMateriais/CardServo.svg';
 import Uno from '../../assets/carossselMateriais/CardUno.svg';
-import Mega from '../../assets/carossselMateriais/CardMega.svg';
-import DFplayer from '../../assets/carossselMateriais/CardDFplayer.svg';
-import Resistor from '../../assets/carossselMateriais/CardResistor.svg';
-import Filamento from '../../assets/carossselMateriais/CardFilamento.svg';
+
+
 
 export default function CMateriais() {
   return (
@@ -68,10 +63,16 @@ export default function CMateriais() {
         <img src={Conector} alt="Conector" className="mx-auto" />
       </SwiperSlide>
       <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
-        <img src={DisplayLCD} alt="Display LCD" className="mx-auto" />
+        <img src={DisplayIPS} alt="Display IPS" className="mx-auto" />
       </SwiperSlide>
       <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Jumperers} alt="Jumperers" className="mx-auto" />
+      </SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
+        <img src={Leonardo} alt="Leonardo" className="mx-auto" />
+      </SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
+        <img src={Mineprotoboard} alt="Mineprotoboard" className="mx-auto" />
       </SwiperSlide>
       <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Protoboard} alt="Protoboard" className="mx-auto" />
@@ -81,18 +82,6 @@ export default function CMateriais() {
       </SwiperSlide>
       <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Uno} alt="Uno" className="mx-auto" />
-      </SwiperSlide>
-      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
-        <img src={Mega} alt="Arduino Mega" className="mx-auto" />
-      </SwiperSlide>
-      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
-        <img src={DFplayer} alt="DFplayer Mini" className="mx-auto" />
-      </SwiperSlide>
-      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
-        <img src={Resistor} alt="Resistor 1K" className="mx-auto" />
-      </SwiperSlide>
-      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
-        <img src={Filamento} alt="Filamento" className="mx-auto" />
       </SwiperSlide>
     </Swiper>
   );
