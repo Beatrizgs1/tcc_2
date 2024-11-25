@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoSite from '../assets/logoSite.svg';
 import logoSite2 from '../assets/logoSite2.svg';
-import tresLinhas from '../assets/tresLinhas.svg';
+import { FaBars } from 'react-icons/fa'; // Importando o ícone de três linhas
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function Nav() {
                     <img
                         src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
                         alt="Logo do site Robô Kids"
-                        className="w-auto h-10 md:h-12" // Ajuste da altura para o mobile e desktop
+                        className="w-auto h-10" // Define as duas logos com o mesmo tamanho
                     />
                     <ul className="text-sm flex space-x-12">
                         {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
@@ -96,14 +96,11 @@ export default function Nav() {
                     <img
                         src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
                         alt="Logo do site Robô Kids"
-                        className="w-auto h-8 md:h-10" // Logo menor no mobile
+                        className="w-auto h-8 md:h-7" // Define as duas logos com o mesmo tamanho
                     />
                     <button onClick={toggleMenu} className="focus:outline-none">
-                        {isMenuOpen ? (
-                            <span className="text-2xl dark:text-white">&times;</span>
-                        ) : (
-                            <img src={tresLinhas} alt="Menu" />
-                        )}
+                        {/* Ícone de três linhas, branco para o tema escuro e preto para o claro */}
+                        <FaBars className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`} />
                     </button>
                     {/* Botão de alternar tema no menu mobile */}
                     <button
@@ -118,9 +115,7 @@ export default function Nav() {
                         isMenuOpen ? 'max-h-screen' : 'max-h-0'
                     }`}
                 >
-                    <div
-                        className={`p-4 ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}
-                    >
+                    <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
                         <ul className="flex flex-col space-y-8 mt-4">
                             {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
                                 (path, index) => (
