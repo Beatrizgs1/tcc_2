@@ -18,9 +18,9 @@ export default function Nav() {
     // Alterar tema no corpo do documento
     useEffect(() => {
         if (theme === 'dark') {
-            document.body.classList.add('dark');
+            document.body.classList.add('dark', 'text-white');
         } else {
-            document.body.classList.remove('dark');
+            document.body.classList.remove('dark', 'text-white');
         }
     }, [theme]);
 
@@ -31,33 +31,41 @@ export default function Nav() {
     return (
         <div>
             {/* Navbar - Tema Claro e Escuro para o header e site inteiro */}
-            <div className={`bg-white p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] border-purple dark:bg-dark-bg dark:border-dark-border`}>
+            <div
+                className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${
+                    theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'
+                }`}
+            >
                 <div className="max-w-8xl mx-auto flex justify-between items-center px-4">
                     <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
                     <ul className="text-sm flex space-x-12">
-                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map((path, index) => (
-                            <li key={index} className="relative group">
-                                <Link
-                                    to={path}
-                                    className={`relative inline-block transition-transform duration-300 ease-in-out ${
-                                        location.pathname === path
-                                            ? 'text-purple font-bold'
-                                            : 'hover:text-purple'
-                                    }`}
-                                >
-                                    {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                                </Link>
-                                <span
-                                    className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
-                                        location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
-                                    }`}
-                                />
-                            </li>
-                        ))}
+                        {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
+                            (path, index) => (
+                                <li key={index} className="relative group">
+                                    <Link
+                                        to={path}
+                                        className={`relative inline-block transition-transform duration-300 ease-in-out ${
+                                            location.pathname === path
+                                                ? 'text-purple font-bold'
+                                                : 'hover:text-purple dark:text-white'
+                                        }`}
+                                    >
+                                        {path === '/'
+                                            ? 'Home'
+                                            : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                                    </Link>
+                                    <span
+                                        className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
+                                            location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
+                                        }`}
+                                    />
+                                </li>
+                            )
+                        )}
                         <li>
                             <Link
                                 to="/login"
-                                className="border border-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white transition-all duration-300 ease-in-out"
+                                className="border border-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white transition-all duration-300 ease-in-out dark:text-white"
                             >
                                 Login
                             </Link>
@@ -65,7 +73,7 @@ export default function Nav() {
                         <li>
                             <Link
                                 to="/singup"
-                                className="bg-purple text-white rounded px-4 py-1.5 hover:bg-white hover:text-purple border border-purple transition-all duration-300 ease-in-out"
+                                className="bg-purple text-white rounded px-4 py-1.5 hover:bg-white hover:text-purple border border-purple transition-all duration-300 ease-in-out dark:text-white"
                             >
                                 Sign Up
                             </Link>
@@ -74,7 +82,7 @@ export default function Nav() {
                     {/* Botão de alternar tema */}
                     <button
                         onClick={toggleTheme}
-                        className="hidden md:block text-2xl focus:outline-none ml-4"
+                        className="hidden md:block text-2xl focus:outline-none ml-4 dark:text-white"
                     >
                         {theme === 'light' ? '🌙' : '☀️'}
                     </button>
@@ -87,7 +95,7 @@ export default function Nav() {
                     <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {isMenuOpen ? (
-                            <span className="text-2xl">&times;</span>
+                            <span className="text-2xl dark:text-white">&times;</span>
                         ) : (
                             <img src={tresLinhas} alt="Menu" />
                         )}
@@ -95,7 +103,7 @@ export default function Nav() {
                     {/* Botão de alternar tema no menu mobile */}
                     <button
                         onClick={toggleTheme}
-                        className="text-2xl focus:outline-none"
+                        className="text-2xl focus:outline-none dark:text-white"
                     >
                         {theme === 'light' ? '🌙' : '☀️'}
                     </button>
@@ -107,31 +115,35 @@ export default function Nav() {
                 >
                     <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
                         <ul className="flex flex-col space-y-8 mt-4">
-                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map((path, index) => (
-                                <li key={index} className="relative group">
-                                    <Link
-                                        to={path}
-                                        onClick={toggleMenu}
-                                        className={`relative inline-block transition-transform duration-300 ease-in-out ${
-                                            location.pathname === path
-                                                ? 'font-bold underline decoration-purple text-white'
-                                                : 'hover:underline'
-                                        }`}
-                                    >
-                                        {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                                    </Link>
-                                    <span
-                                        className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
-                                            location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
-                                        }`}
-                                    />
-                                </li>
-                            ))}
+                            {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
+                                (path, index) => (
+                                    <li key={index} className="relative group">
+                                        <Link
+                                            to={path}
+                                            onClick={toggleMenu}
+                                            className={`relative inline-block transition-transform duration-300 ease-in-out ${
+                                                location.pathname === path
+                                                    ? 'font-bold underline decoration-purple text-white'
+                                                    : 'hover:underline dark:text-white'
+                                            }`}
+                                        >
+                                            {path === '/'
+                                                ? 'Home'
+                                                : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                                        </Link>
+                                        <span
+                                            className={`absolute left-0 bottom-[-2px] h-[2px] bg-purple transition-all duration-300 ease-in-out ${
+                                                location.pathname === path ? 'w-full' : 'w-0 group-hover:w-full'
+                                            }`}
+                                        />
+                                    </li>
+                                )
+                            )}
                             <li>
                                 <Link
                                     to="/login"
                                     onClick={toggleMenu}
-                                    className="border border-white rounded px-4 py-1.5 hover:bg-white hover:text-purple transition-all duration-300 ease-in-out"
+                                    className="border border-white rounded px-4 py-1.5 hover:bg-white hover:text-purple transition-all duration-300 ease-in-out dark:text-white"
                                 >
                                     Login
                                 </Link>
@@ -140,7 +152,7 @@ export default function Nav() {
                                 <Link
                                     to="/singup"
                                     onClick={toggleMenu}
-                                    className="bg-white text-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white border-purple"
+                                    className="bg-white text-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white border-purple dark:text-white"
                                 >
                                     Sign Up
                                 </Link>
