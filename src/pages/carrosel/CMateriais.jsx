@@ -69,40 +69,64 @@ export default function CMateriais() {
         className="mySwiper max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto"
       >
         <SwiperSlide>
-          <img src={Bateria} alt="Bateria" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Bateria} alt="Bateria" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={AltoFalante} alt="Alto-Falante" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={AltoFalante} alt="Alto-Falante" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Conector} alt="Conector" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Conector} alt="Conector" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={DisplayLCD} alt="Display LCD" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={DisplayLCD} alt="Display LCD" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Jumperers} alt="Jumperers" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Jumperers} alt="Jumperers" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Protoboard} alt="Protoboard" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Protoboard} alt="Protoboard" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Servo} alt="Servo" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Servo} alt="Servo" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Uno} alt="Uno" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Uno} alt="Uno" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Mega} alt="Arduino Mega" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Mega} alt="Arduino Mega" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={DFplayer} alt="DFplayer Mini" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={DFplayer} alt="DFplayer Mini" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Resistor} alt="Resistor 1K" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Resistor} alt="Resistor 1K" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Filamento} alt="Filamento" className="mx-auto" />
+          <div className="bg-white p-0 rounded-lg shadow-lg overflow-hidden">
+            <img src={Filamento} alt="Filamento" className="w-full h-full object-cover" />
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>
