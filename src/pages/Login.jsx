@@ -50,7 +50,7 @@ export function Login() {
           {!isMenuOpen && (
             <div className='absolute top-20 right-2 sm:right-8 mt-8 sm:mt-4 flex items-center space-x-2'>
               <p className='text-gray dark:text-white'>Não tem uma conta? </p>
-              <button className='text-purple text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple hover:text-white hover:border-purple'>
+              <button className='text-purple hov text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple hover:text-white hover:border-purple dark:hover:text-white'>
                 <Link to="/singup">Sign Up</Link>
               </button>
             </div>
