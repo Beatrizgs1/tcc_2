@@ -45,7 +45,7 @@ export function Login() {
     return (
       <>
         <Nav /> {/* A navegação também ficará com fundo preto */}
-        <main className='font-inter min-h-screen mt-14 mb-12 sm:mt-1 sm:mb-1 flex flex-col md:flex-row items-center justify-center p-6 dark:bg-black dark:text-white'>
+        <main className='font-inter min-h-screen mt-14 mb-12 sm:mt-1 sm:mb-1 flex flex-col md:flex-row items-center justify-center p-6 bg-dark-bg dark:bg-dark-bg dark:text-white'>
           
           {!isMenuOpen && (
             <div className='absolute top-20 right-2 sm:right-8 mt-8 sm:mt-4 flex items-center space-x-2'>
@@ -82,7 +82,7 @@ export function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder='ex: robokids@gmail.com'
-                    className='block w-full p-3 border-2 border-purple rounded bg-white dark:bg-black dark:text-white'
+                    className='block w-full p-3 border-2 border-purple rounded bg-white dark:bg-dark-card dark:text-white'
                   />
                 </div>
 
@@ -94,7 +94,7 @@ export function Login() {
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                     placeholder='********'
-                    className='block w-full p-3 border-2 border-purple rounded bg-white dark:bg-black dark:text-white'
+                    className='block w-full p-3 border-2 border-purple rounded bg-white first-letter:dark:bg-dark-card dark:text-white'
                   />
                   <div className='mt-2 flex items-center'>
                     <input

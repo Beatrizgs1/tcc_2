@@ -36,11 +36,11 @@ export function Singup() {
   return (
     <>
       <Nav />
-      <main className='font-inter min-h-screen mt-14 mb-12 sm:mt-1 sm:mb-1 flex flex-col md:flex-row items-center justify-center p-6 dark:bg-black dark:text-white'>
+      <main className='font-inter min-h-screen mt-14 mb-12 sm:mt-1 sm:mb-1 flex flex-col md:flex-row items-center justify-center p-6 bg-dark-bg dark:bg-dark-bg dark:text-white'>
         
         <div className='absolute top-20 right-2 sm:right-8 mt-8 sm:mt-4 flex items-center space-x-2'>
           <p className='text-gray dark:text-white'>Já tem uma conta?</p>
-          <button className='text-purple text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple hover:text-white hover:border-purple'>
+          <button className=' text-purple hover:text-white text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple  hover:border-purple'>
             <Link to="/login">Login</Link>
           </button>
         </div>
@@ -53,8 +53,8 @@ export function Singup() {
           />
         </div>
 
-        {/* Contêiner do formulário com fundo preto no modo escuro */}
-        <div className='md:ml-8 w-full md:w-auto px-4 md:px-0 mb-[20px] dark:bg-black'>
+    
+        <div className='md:ml-8 w-full md:w-auto px-4 md:px-0 mb-[20px] dark:bg-dark-card'>
           <h1 className='text-3xl text-black md:text-4xl text-center md:text-left font-singUp dark:text-white'>
             Bem-vindo ao Robô <span className='text-purple font-titulo'>Kids</span>
           </h1>

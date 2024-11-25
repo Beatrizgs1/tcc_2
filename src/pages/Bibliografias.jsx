@@ -23,7 +23,7 @@ export function Bibliografias() {
 
           <div className='flex items-center mt-12 mb-6'>
             <h2 className='text-purple text-xl sm:text-2xl font-titulo my-14 font-normal whitespace-nowrap sm:ml-[230px] ml-10 dark:text-white'>Artigos Científicos</h2>
-            <hr className='w-[100px] border-purple sm:w-[1240px] pr-[20px] ml-3 mr-[10px]' />
+            <hr className='w-[100px] border-purple sm:w-[1200px] pr-[20px] ml-3 mr-[10px]' />
           </div>
 
           <div className='flex flex-col sm:flex-row items-center justify-center px-6 sm:px-44 mb-24 gap-20'>

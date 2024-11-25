@@ -19,7 +19,7 @@ export function Home() {
             className="mt-10 sm:w-[557px] sm:h-[666px] w-[153px] h-[182px] mx-auto sm:ml-[100px] sm:mr-[170px] font-titulo transform transition ease-in-out duration-1000 float-effect mr-[100px]" 
           />
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left ml-6 mr-6">
-            <h1 className="scale-animation font-semibold text-[#5C6898] dark:text-white mb-10 text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-titulo mt-12 sm:ml-[3px]">
+            <h1 className="scale-animation font-semibold text-[#5C6898] dark:text-purple mb-10 text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-titulo mt-12 sm:ml-[3px]">
               Robô Kids
             </h1>
 
@@ -28,7 +28,7 @@ export function Home() {
               Por meio da integração da tecnologia, as crianças podem se divertir enquanto aprendem, ao passo que os pais têm a oportunidade de monitorar o progresso de seus filhos.
             </p>
             <Link to="/produto">
-              <button className="button-animation font-topico px-6 py-3 w-32 bg-purple text-white rounded-lg border border-transparent mb-11 mt-11">
+              <button className="button-animation font-topico px-6 py-3 w-32 bg-purple text-white rounded-lg border-transparent mb-11 mt-11">
                 Veja mais
               </button>
             </Link>

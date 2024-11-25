@@ -110,12 +110,10 @@ export default function Nav() {
 
                 {/* Menu Dropdown */}
                 <div
-                    className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
-                        isMenuOpen ? 'max-h-screen' : 'max-h-0'
-                    }`}
+                    className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'}`}
                 >
-                    <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
-                        <div className="flex justify-between items-center mb-4 pl-[333px]">
+                    <div className={`p-4 ${theme === 'dark' ? 'bg-black' : 'bg-purple'} text-white dark:bg-dark-card`}>
+                        <div className="flex justify-between items-center mb-4">
                             {/* Ícone de fechar (X) posicionado à direita */}
                             <button onClick={toggleMenu} className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                                 <FaTimes />
