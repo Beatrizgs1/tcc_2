@@ -82,7 +82,7 @@ export function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder='ex: robokids@gmail.com'
-                    className='block w-full p-3 border-2 border-purple rounded bg-white dark:bg-dark-card dark:text-white'
+                    className='block w-full p-3 border-2 border-purple rounded bg-white dark:bg-dark-card dark:bg-black'
                   />
                 </div>
 
@@ -94,7 +94,7 @@ export function Login() {
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                     placeholder='********'
-                    className='block w-full p-3 border-2 border-purple rounded bg-white first-letter:dark:bg-dark-card dark:text-white'
+                    className='block w-full p-3 border-2 border-purple rounded bg-white first-letter:dark:bg-dark-card dark:bg-black'
                   />
                   <div className='mt-2 flex items-center'>
                     <input
