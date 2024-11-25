@@ -32,14 +32,18 @@ function CCards() {
         }}
       >
         <SwiperSlide>
-          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
+          <div className="bg-white dark:bg-black p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
             <img 
               src={Fotobia} 
               alt="Beatriz Gonçalves" 
-              className="w-40 h-40 object-contain rounded-full mb-4 " 
+              className="w-40 h-40 object-contain rounded-full mb-4" 
             />
-            <h2 className="text-xl text-purple mb-2 text-center font-bold">Beatriz Gonçalves</h2>
-            <p className="text-gray-600 mb-4 text-center font-paragrafo">Prótotipo, jogo e site</p>
+            <h2 className="text-xl text-purple dark:text-black mb-2 text-center font-bold">
+              Beatriz Gonçalves
+            </h2>
+            <p className="text-gray-600 dark:text-white mb-4 text-center font-paragrafo">
+              Prótotipo, jogo e site
+            </p>
             <button 
               onClick={() => window.location.href='https://www.instagram.com/biiah_gsouza/'}
               className="bg-purple text-white px-4 py-2 hover:underline rounded-lg hover:opacity-80 transition-opacity duration-300"
@@ -49,14 +53,18 @@ function CCards() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
+          <div className="bg-white dark:bg-black p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
             <img 
               src={Fotole} 
               alt="Letícia Lopes" 
-              className="w-40 h-40 object-contain rounded-full mb-4 " 
+              className="w-40 h-40 object-contain rounded-full mb-4" 
             />
-            <h2 className="text-xl font-bold mb-2 text-center text-purple">Letícia Lopes</h2>
-            <p className="text-gray-600 mb-4 text-center font-paragrafo">Prótotipo, jogo e site</p>
+            <h2 className="text-xl text-purple dark:text-black font-bold mb-2 text-center">
+              Letícia Lopes
+            </h2>
+            <p className="text-gray-600 dark:text-white mb-4 text-center font-paragrafo">
+              Prótotipo, jogo e site
+            </p>
             <button 
               onClick={() => window.location.href='https://www.instagram.com/lee.lopesz/'}
               className="bg-purple text-white px-4 py-2 hover:underline rounded-lg hover:opacity-80 transition-opacity duration-300"
@@ -66,14 +74,18 @@ function CCards() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
+          <div className="bg-white dark:bg-black p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
             <img 
               src={Fotogabi} 
               alt="Gabriela Balieiro" 
-              className="w-40 h-40 object-contain rounded-full mb-4 " 
+              className="w-40 h-40 object-contain rounded-full mb-4" 
             />
-            <h2 className="text-xl mb-2 text-center text-purple font-bold">Gabriela Balieiro</h2>
-            <p className="text-gray-600 mb-4 text-center font-paragrafo">Prótotipo, jogo e site</p>
+            <h2 className="text-xl text-purple dark:text-black mb-2 text-center font-bold">
+              Gabriela Balieiro
+            </h2>
+            <p className="text-gray-600 dark:text-white mb-4 text-center font-paragrafo">
+              Prótotipo, jogo e site
+            </p>
             <button 
               onClick={() => window.location.href='https://www.instagram.com/gabzbali/'}
               className="bg-purple text-white px-4 py-2 hover:underline rounded-lg hover:opacity-80 transition-opacity duration-300"
@@ -83,14 +95,18 @@ function CCards() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
+          <div className="bg-white dark:bg-black p-6 rounded-2xl shadow-lg flex flex-col items-center transform transition-transform duration-300 hover:scale-105">
             <img 
               src={Fotothigas} 
               alt="Thiago Lima" 
-              className="w-40 h-40 object-contain rounded-full mb-4 "
+              className="w-40 h-40 object-contain rounded-full mb-4"
             />
-            <h2 className="text-xl mb-2 text-center text-purple font-bold">Thiago Lima</h2>
-            <p className="text-gray-600 mb-4 text-center font-paragrafo">Prótotipo, jogo e site</p>
+            <h2 className="text-xl text-purple dark:text-black mb-2 text-center font-bold">
+              Thiago Lima
+            </h2>
+            <p className="text-gray-600 dark:text-white mb-4 text-center font-paragrafo">
+              Prótotipo, jogo e site
+            </p>
             <button 
               onClick={() => window.location.href='https://www.instagram.com/thii.lima_/'}
               className="bg-purple text-white px-4 py-2 hover:underline rounded-lg hover:opacity-80 transition-opacity duration-300"
