@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoSite from '../assets/logoSite.svg';
 import logoSite2 from '../assets/logoSite2.svg';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importando o ícone de três linhas e o ícone de fechar (X)
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const location = useLocation();
 
-    // Função para alternar entre os temas
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
@@ -59,24 +58,7 @@ export default function Nav() {
                                 </li>
                             )
                         )}
-                        <li>
-                            <Link
-                                to="/login"
-                                className="border border-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white transition-all duration-300 ease-in-out dark:text-white"
-                            >
-                                Login
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/singup"
-                                className="bg-purple text-white rounded px-4 py-1.5 hover:bg-white hover:text-purple border border-purple transition-all duration-300 ease-in-out dark:text-white"
-                            >
-                                Sign Up
-                            </Link>
-                        </li>
                     </ul>
-                    {/* Botão de alternar tema */}
                     <button
                         onClick={toggleTheme}
                         className="hidden md:block text-2xl focus:outline-none ml-4 dark:text-white"
@@ -100,21 +82,17 @@ export default function Nav() {
                         >
                             {theme === 'light' ? '🌙' : '☀️'}
                         </button>
-
-                        {/* Botão de menu (três linhas) */}
                         <button onClick={toggleMenu} className="focus:outline-none">
                             <FaBars className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`} />
                         </button>
                     </div>
                 </div>
 
-                {/* Menu Dropdown */}
                 <div
                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen' : 'max-h-0'}`}
                 >
                     <div className={`p-4 ${theme === 'dark' ? 'bg-black' : 'bg-purple'} text-white dark:bg-dark-card`}>
                         <div className="flex justify-between items-center mb-4">
-                            {/* Ícone de fechar (X) posicionado à direita */}
                             <button onClick={toggleMenu} className={`text-2xl ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                                 <FaTimes />
                             </button>
@@ -144,24 +122,6 @@ export default function Nav() {
                                     </li>
                                 )
                             )}
-                            <li>
-                                <Link
-                                    to="/login"
-                                    onClick={toggleMenu}
-                                    className="border border-white rounded px-4 py-1.5 hover:bg-white hover:text-purple transition-all duration-300 ease-in-out dark:text-white"
-                                >
-                                    Login
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/singup"
-                                    onClick={toggleMenu}
-                                    className="bg-white text-purple rounded px-4 py-1.5 hover:bg-purple hover:text-white border-purple dark:text-white"
-                                >
-                                    Sign Up
-                                </Link>
-                            </li>
                         </ul>
                     </div>
                 </div>

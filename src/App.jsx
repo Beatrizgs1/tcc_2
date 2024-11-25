@@ -4,8 +4,6 @@ import { Nossoproduto } from './pages/Nossoproduto'
 import { Materiais} from './pages/Materiais'
 import { Bibliografias } from './pages/Bibliografias'
 import { Quemsomos } from './pages/Quemsomos'
-import { Singup } from './pages/Singup'
-import { Login } from  './pages/Login'
 import {Jogo} from './pages/Jogo'
 
 
@@ -29,14 +27,6 @@ const router = createBrowserRouter([
   {
     path: "/desenvolvedores",
     element: <Quemsomos/>
-  },
-  {
-    path: "/singup",
-    element: <Singup/>
-  },
-  {
-    path: "/login",
-    element: <Login/>
   },
   {
     path: "/jogos",
