@@ -13,6 +13,7 @@ export function Login() {
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [mostrarMensagemSucesso, setMostrarMensagemSucesso] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar a visibilidade do menu
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
@@ -43,15 +44,17 @@ export function Login() {
 
     return (
       <>
-        <Nav />
+        <Nav /> {/* A navegação também ficará com fundo preto */}
         <main className='font-inter min-h-screen mt-14 mb-12 sm:mt-1 sm:mb-1 flex flex-col md:flex-row items-center justify-center p-6 dark:bg-black dark:text-white'>
           
-          <div className='absolute top-20 right-2 sm:right-8 mt-8 sm:mt-4 flex items-center space-x-2'>
-            <p className='text-gray dark:text-white'>Não tem uma conta? </p>
-            <button className='text-purple text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple hover:text-white hover:border-purple'>
-              <Link to="/singup">Sign Up</Link>
-            </button>
-          </div>
+          {!isMenuOpen && (
+            <div className='absolute top-20 right-2 sm:right-8 mt-8 sm:mt-4 flex items-center space-x-2'>
+              <p className='text-gray dark:text-white'>Não tem uma conta? </p>
+              <button className='text-purple text-sm font-bold border-solid border-2 border-indigo-500 rounded px-5 hover:bg-purple hover:text-white hover:border-purple'>
+                <Link to="/singup">Sign Up</Link>
+              </button>
+            </div>
+          )}
   
           <div className='flex-shrink-0 mb-8 md:mb-0 md:mr-16'>
             <img
