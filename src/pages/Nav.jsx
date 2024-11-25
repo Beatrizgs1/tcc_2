@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoSite from '../assets/logoSite.svg';
+import logoSite2 from '../assets/logoSite2.svg';
 import tresLinhas from '../assets/tresLinhas.svg';
 
 export default function Nav() {
@@ -33,7 +34,11 @@ export default function Nav() {
                 }`}
             >
                 <div className="max-w-8xl mx-auto flex justify-between items-center px-4">
-                    <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
+                    <img
+                        src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
+                        alt="Logo do site Robô Kids"
+                        className="w-auto h-10 md:h-12" // Ajuste da altura para o mobile e desktop
+                    />
                     <ul className="text-sm flex space-x-12">
                         {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
                             (path, index) => (
@@ -88,7 +93,11 @@ export default function Nav() {
             {/* Menu para dispositivos móveis */}
             <div className="md:hidden">
                 <div className="flex justify-between items-center p-4">
-                    <img src={logoSite} alt="Logo do site escrito Robô Kids" className="w-auto" />
+                    <img
+                        src={theme === 'dark' ? logoSite2 : logoSite} // Troca a logo com base no tema
+                        alt="Logo do site Robô Kids"
+                        className="w-auto h-8 md:h-10" // Logo menor no mobile
+                    />
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {isMenuOpen ? (
                             <span className="text-2xl dark:text-white">&times;</span>
@@ -109,7 +118,9 @@ export default function Nav() {
                         isMenuOpen ? 'max-h-screen' : 'max-h-0'
                     }`}
                 >
-                    <div className={`bg-purple text-white p-4 dark:bg-dark-card`}>
+                    <div
+                        className={`p-4 ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}
+                    >
                         <ul className="flex flex-col space-y-8 mt-4">
                             {['/', '/produto', '/materiais', '/bibliografias', '/desenvolvedores', '/jogos'].map(
                                 (path, index) => (
@@ -160,4 +171,3 @@ export default function Nav() {
         </div>
     );
 }
-

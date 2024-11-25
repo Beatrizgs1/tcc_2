@@ -4,8 +4,6 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import Bateria from '../../assets/carossselMateriais/CardBateria.svg';
@@ -45,7 +43,7 @@ export default function CMateriais() {
           spaceBetween: 10,
         },
         480: {
-          slidesPerView: 1, 
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         640: {
@@ -60,40 +58,40 @@ export default function CMateriais() {
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto"
     >
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Bateria} alt="Bateria" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={AltoFalante} alt="Alto-Falante" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Conector} alt="Conector" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={DisplayLCD} alt="Display LCD" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Jumperers} alt="Jumperers" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Protoboard} alt="Protoboard" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Servo} alt="Servo" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Uno} alt="Uno" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Mega} alt="Arduino Mega" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={DFplayer} alt="DFplayer Mini" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Resistor} alt="Resistor 1K" className="mx-auto" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="bg-white dark:bg-black text-black dark:text-white p-4 rounded-lg shadow-md">
         <img src={Filamento} alt="Filamento" className="mx-auto" />
       </SwiperSlide>
     </Swiper>
