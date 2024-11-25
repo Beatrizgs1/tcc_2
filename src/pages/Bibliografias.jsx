@@ -27,7 +27,7 @@ export function Bibliografias() {
           </div>
 
           <div className='flex flex-col sm:flex-row items-center justify-center px-6 sm:px-44 mb-24 gap-20'>
-            {[
+            {[ 
               { id: 1, title: 'Artigo 1', description: 'Linguagem Visual para Arduino na Educação Básica como Possibilidade Metodológica', link: 'https://sol.sbc.org.br/index.php/ctrle/article/view/25805' },
               { id: 2, title: 'Artigo 2', description: 'A robótica como facilitadora do processo ensino-aprendizagem de matemática no ensino fundamental', link: 'https://books.scielo.org/id/bpkng/11' },
               { id: 3, title: 'Artigo 3', description: 'O Uso da Robótica Educacional no Ensino Fundamental: Um estudo de caso preliminar', link: 'https://escolaweb.educacao.al.gov.br/odas/o-uso-da-robotica-educacional-no-ensino-fundamental-um-estudo-de-caso-preliminar-47033' },
@@ -37,7 +37,8 @@ export function Bibliografias() {
                 <a href={article.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 bg-white bg-opacity-80 flex items-center justify-center transition-opacity duration-300">
                   <span className="text-purple font-semibold text-lg">Acessar Artigo</span>
                 </a>
-                <img className="w-28 h-32 mb-8 translate-y-6 overflow-hidden flex flex-col items-center justify-between bg-white transition-opacity duration-300 dark:bg-transparent" src={iconLivro} alt="Ícone do Livro" />
+                {/* A modificação está aqui, removendo o fundo branco */}
+                <img className="w-28 h-32 mb-8 translate-y-6 overflow-hidden flex flex-col items-center justify-between bg-transparent transition-opacity duration-300 dark:bg-transparent" src={iconLivro} alt="Ícone do Livro" />
                 <p className="text-purple text-2xl font-semibold font-paragrafo mb-2 dark:text-white">{article.title}</p>
                 <p className="text-center text-black text-base text-justify font-paragrafo px-6 dark:text-white">{article.description}</p>
               </div>
@@ -49,4 +50,3 @@ export function Bibliografias() {
     </div>
   );
 }
-
