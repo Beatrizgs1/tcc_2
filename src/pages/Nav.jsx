@@ -8,14 +8,12 @@ export default function Nav() {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const location = useLocation();
 
-    // Função para alternar entre os temas
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
     };
 
-    // Alterar tema no corpo do documento
     useEffect(() => {
         if (theme === 'dark') {
             document.body.classList.add('dark', 'text-white');
@@ -30,7 +28,7 @@ export default function Nav() {
 
     return (
         <div>
-            {/* Navbar - Tema Claro e Escuro para o header e site inteiro */}
+            {/* Navbar */}
             <div
                 className={`p-5 px-4 ml-6 mr-6 hidden md:block border-b-[1px] transition-colors duration-300 ease-in-out ${
                     theme === 'dark' ? 'bg-dark-bg border-dark-border' : 'bg-white border-purple'
@@ -79,7 +77,6 @@ export default function Nav() {
                             </Link>
                         </li>
                     </ul>
-                    {/* Botão de alternar tema */}
                     <button
                         onClick={toggleTheme}
                         className="hidden md:block text-2xl focus:outline-none ml-4 dark:text-white"
@@ -100,7 +97,6 @@ export default function Nav() {
                             <img src={tresLinhas} alt="Menu" />
                         )}
                     </button>
-                    {/* Botão de alternar tema no menu mobile */}
                     <button
                         onClick={toggleTheme}
                         className="text-2xl focus:outline-none dark:text-white"

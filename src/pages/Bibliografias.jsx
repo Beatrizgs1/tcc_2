@@ -12,7 +12,7 @@ export function Bibliografias() {
         <div className='p-4'>
           <div>
             <h1 className="text-purple text-2xl sm:px-44 py-6 mr-2 ml-10 font-semibold text-center sm:text-start font-titulo md:text-4xl mb-6 mt-6">Bibliografias</h1>
-            <p className="font-paragrafo text-justify text-base sm:px-40 sm:py-38 sm:text-lg mb-5 mr-10 ml-[60px]">
+            <p className="font-paragrafo text-justify text-base sm:px-40 sm:py-38 sm:text-lg mb-5 mr-10 ml-[60px] dark:text-white">
               A ciência tem mostrado o quão é importante a utilização de meios que modifiquem o ensino e a aprendizagem através do uso da tecnologia, instiguem e criem situações provocantes, possam cativar a atenção das crianças, tornando o processo de aprendizagem mais envolvente e interessante. Partindo desse princípio, surgiu a ideia do protótipo do Robô Kids.
               <br/><br/>
               A tecnologia é um meio de aprendizagem inovador e eficaz, na qual a criança, além de se divertir, está aprendendo e progredindo seus conhecimentos.
@@ -22,7 +22,7 @@ export function Bibliografias() {
           </div>
 
           <div className='flex items-center mt-12 mb-6'>
-            <h2 className='text-purple text-xl sm:text-2xl font-titulo my-14 font-normal whitespace-nowrap sm:ml-[230px] ml-10'>Artigos Científicos</h2>
+            <h2 className='text-purple text-xl sm:text-2xl font-titulo my-14 font-normal whitespace-nowrap sm:ml-[230px] ml-10 dark:text-white'>Artigos Científicos</h2>
             <hr className='w-[100px] border-purple sm:w-[1240px] pr-[20px] ml-3 mr-[10px]' />
           </div>
 
@@ -38,8 +38,8 @@ export function Bibliografias() {
                   <span className="text-purple font-semibold text-lg">Acessar Artigo</span>
                 </a>
                 <img className="w-28 h-32 mb-8 translate-y-6 overflow-hidden flex flex-col items-center justify-between bg-white transition-opacity duration-300" src={iconLivro} alt="Ícone do Livro"/>
-                <p className="text-purple text-2xl font-semibold font-paragrafo mb-2">{article.title}</p>
-                <p className="text-center text-black text-base text-justify font-paragrafo px-6">{article.description}</p>
+                <p className="text-purple text-2xl font-semibold font-paragrafo mb-2 dark:text-white">{article.title}</p>
+                <p className="text-center text-black text-base text-justify font-paragrafo px-6 dark:text-white">{article.description}</p>
               </div>
             ))}
           </div>
